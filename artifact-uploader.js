@@ -1,7 +1,5 @@
 'use strict';
 
-require( 'dotenv' ).config();
-
 const path = require( 'path' );
 const fs = require( 'fs' );
 const minio = require( 'minio' );
@@ -9,8 +7,6 @@ const glob = require( 'glob' );
 const crypto = require( 'crypto' );
 const filesize = require( 'filesize' );
 const mime = require( 'mime-types' );
-
-
 
 const settings = require( 'drone-env-parser' ).parseEnvs( {
     defaults: {
@@ -27,7 +23,6 @@ const settings = require( 'drone-env-parser' ).parseEnvs( {
         mimetypes: {}
     }
 } );
-
 
 function run() {
     let minioClient = new minio.Client( {
