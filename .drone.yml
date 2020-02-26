@@ -3,11 +3,6 @@ name: default
 type: docker
 
 steps:
-  - name: test
-    image: node:alpine
-    commands:
-      - npm ci
-      - npm test
   - name: publish
     image: plugins/docker
     settings:
@@ -16,9 +11,4 @@ steps:
       password:
         from_secret: docker_password
       repo: md5lukas/drone-artifact-shelf
-      dockerfile: Dockerfile
-      tags:
-        - latest
-    when:
-      branch:
-        - release
+      auto_tag: true

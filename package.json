@@ -4,7 +4,6 @@
   "description": "A simple artifact storage for drone based on a s3 backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
