@@ -1,0 +1,1 @@
+require('./artifact-uploader').run();
