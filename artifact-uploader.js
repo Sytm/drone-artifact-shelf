@@ -44,7 +44,7 @@ function run() {
         if ( error.message.toLowerCase() === 'not found' ) {
 
             let artifactMetaData = {
-                id: process.env.DRONE_REPO_NAME,
+                id: artifactId,
                 name: process.env.DRONE_REPO_NAME,
                 git: {
                     base: process.env.DRONE_REPO_LINK
